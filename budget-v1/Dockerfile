@@ -7,4 +7,6 @@ COPY package.json .
 
 EXPOSE 9006
 
+RUN yarn install
+
 CMD ["yarn", "node", "-r", "esm", "./src/bin/www.js"]

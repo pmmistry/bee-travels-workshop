@@ -1,0 +1,15 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: budget-v1
+  labels:
+    app: budget-v1
+spec:
+  ports:
+    - name: 9006-tcp
+      protocol: TCP
+      port: 9006
+      targetPort: 9006
+  selector:
+    app: budget-v1
+    deploymentconfig: budget-v1
